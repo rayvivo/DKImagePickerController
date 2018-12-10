@@ -25,7 +25,7 @@ class DKAssetGroupDetailImageCell: DKAssetGroupDetailBaseCell {
         self.checkView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.checkView.checkImageView.tintColor = nil
         self.checkView.checkLabel.font = UIFont.boldSystemFont(ofSize: 14)
-        self.checkView.checkLabel.textColor = UIColor.white
+        self.checkView.checkLabel.textColor = UIColor(red: 233.0/255.0, green: 90.0/255.0, blue: 54.0/255.0, alpha: 1)
         self.contentView.addSubview(self.checkView)
         self.contentView.accessibilityIdentifier = "DKImageAssetAccessibilityIdentifier"
         self.contentView.isAccessibilityElement = true
