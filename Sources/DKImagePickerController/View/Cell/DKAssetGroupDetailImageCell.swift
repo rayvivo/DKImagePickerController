@@ -24,7 +24,7 @@ class DKAssetGroupDetailImageCell: DKAssetGroupDetailBaseCell {
         self.checkView.frame = self.bounds
         self.checkView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.checkView.checkImageView.tintColor =  UIColor(red: 233.0/255.0, green: 90.0/255.0, blue: 54.0/255.0, alpha: 1)
-        print ("Check Image View", self.checkView.checkImageView.image)
+       
         self.checkView.checkLabel.font = UIFont.boldSystemFont(ofSize: 14)
         self.checkView.checkLabel.textColor = UIColor(red: 233.0/255.0, green: 90.0/255.0, blue: 54.0/255.0, alpha: 1)
         self.contentView.addSubview(self.checkView)
@@ -39,7 +39,8 @@ class DKAssetGroupDetailImageCell: DKAssetGroupDetailBaseCell {
     class DKImageCheckView: UIView {
         
         internal lazy var checkImageView: UIImageView = {
-            let imageView = UIImageView(image: DKImagePickerControllerResource.checkedImage())
+            let imageView = UIImageView (image: UIImage(named: "checked_background"))//UIImageView(image: DKImagePickerControllerResource.checkedImage())
+            
             return imageView
         }()
         
@@ -65,6 +66,7 @@ class DKAssetGroupDetailImageCell: DKAssetGroupDetailBaseCell {
             super.layoutSubviews()
             
             self.checkImageView.frame = self.bounds
+            print ("RRRR", self.checkImageView.frame)
             self.checkLabel.frame = CGRect(x: 0, y: 5, width: self.bounds.width - 5, height: 20)
         }
         
